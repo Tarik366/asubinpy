@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QDesktopWidget, QWidget,QPushButton,QFrame,QMessageBox
-from PyQt5.QtCore import Qt,QSize,QCoreApplication
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QWidget,QPushButton,QFrame,QMessageBox
+from PyQt6.QtCore import Qt,QSize,QCoreApplication
+from PyQt6.QtGui import QIcon, QPixmap
+import style_creator
 
 class myWin(QMainWindow):
     def __init__(self):
@@ -8,13 +9,17 @@ class myWin(QMainWindow):
         self.setWindowTitle("Âsub-ı py")
 
         # Window sizing
-        screen = QDesktopWidget().screenGeometry()
         self.setMinimumSize(1000, 600)
-        x = (screen.width() - self.width()) // 2
-        y = screen.height() - self.height() // 2
-        self.move(x, y)
 
-        
+        # Adding some css
+        style_creator.create_css()
+        with open("style/style-default.css","r") as file:
+            self.setStyleSheet(file.read())
+        try:
+            with open("style/style.css","r") as file:
+                self.setStyleSheet(file.read())
+        except:
+            pass
 
 from threading import Thread
 import sys
