@@ -1,4 +1,8 @@
 {
+    "*":{
+        "color":"#ffffff",
+        "background":"#222222"
+    },
     "QMainWindow":{
         "background":"#222222",
         "color":"#ffffff"

@@ -1,0 +1,25 @@
+{
+    "language": "English",
+    "authors": ["Tarık366"],
+    "translations":{
+        "MenuBar": {
+            "File": "File",
+            "FileNew": "New",
+            "FileOpen": "Open",
+            "FileSave": "Save",
+            "FileSaveAs": "Save as...",
+            "FileRecent": "Recent",
+            "FileNewWindow": "New Window",
+            "FileExit": "Exit",
+            "Edit": "Edit",
+            "EditUndo": "Undo",
+            "EditRedo": "Redo",
+            "EditCut": "Cut Lines",
+            "EditCopy": "Copy Lines",
+            "EditPaste": "Paste Lines",
+            "Find": "Find",
+            "FindReplace": "Find and Replace",
+            "Help": "Help"
+        }
+    }
+}
